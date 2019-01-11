@@ -24,7 +24,7 @@ $ sudo nano /etc/sudoers.d/grader
   * Add following line to this file
   
 ```
-grader ALL=(ALL:ALL) ALL
+grader ALL=(ALL) NOPASSWD:ALL
 ```
   * To prevent the "sudo: unable to resolve host" error
   
