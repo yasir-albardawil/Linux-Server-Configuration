@@ -41,7 +41,9 @@ $ 127.0.1.1 ip-172-26-0-49
 #### 2. Configure authentication for grader user
 
    i. Copy public key from root *$ sudo cat /home/ubuntu/.ssh/authorized_keys*
+   
    ii. Place the public key from root to grader:
+   
 ```
 $ sudo touch /home/grader/.ssh/authorized_keys
 $ sudo nano /home/grader/.ssh/authorized_keys
@@ -260,7 +262,7 @@ CLIENT_ID = json.loads(
     open('/var/www/catalog/gp_client_secrets.json', 'r').read())['web']['client_id']
 ```
 ```
-oauth_flow = flow_from_clientsecrets('/var/www/catalog/gp_client_secrets.json',                                          scope='')
+oauth_flow = flow_from_clientsecrets('/var/www/catalog/gp_client_secrets.json', scope='')
 ```
 #### 18. Restart Apache to launch the app
 ```
