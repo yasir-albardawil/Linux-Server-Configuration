@@ -93,19 +93,7 @@ $ sudo ufw allow ntp
 $ sudo ufw enable
 ```
 
-#### 9. Configure cron scripts to automatically manage package updates
-  * Install unattended-upgrades if not already installed using command:
-  
-```
-   $ sudo apt-get install unattended-upgrades
-```
-  * Enable it using command:
-  
-```
-$ sudo dpkg-reconfigure --priority=low unattended-upgrades
-```
-
-#### 10. Install and Configure Apache2, mod-wsgi and Git
+#### 9. Install and Configure Apache2, mod-wsgi and Git
 ```
 $ sudo apt-get install apache2 libapache2-mod-wsgi git
 ```
@@ -115,7 +103,7 @@ $ sudo apt-get install apache2 libapache2-mod-wsgi git
 $ sudo a2enmod wsgi
 ```
 
-#### 11. Install and configure PostgreSQL
+#### 10. Install and configure PostgreSQL
   * Installing PostgreSQL Python dependencies:
   
 ```
@@ -133,27 +121,35 @@ $ sudo su - postgres
 $ psql
 ```
 
-Create a new user named *movie_catalog*:  
+Create a new user named *movie_catalog*: 
+
 `# CREATE USER movie_catalog WITH PASSWORD 'movie_catalog';`
+
 Create a new database named *movie_catalog: 
+
 `# CREATE DATABASE movie_catalog WITH OWNER movie_catalog;`
+
 Connect to the database *catalog* : 
+
 `# \c movie_catalog`
+
 Revoke all rights: 
+
 `# REVOKE ALL ON SCHEMA public FROM public;`
+
 Lock down the permissions only to user *movie_catalog *: 
+
 `# GRANT ALL ON SCHEMA public TO movie_catalog;`
+
 Log out from PostgreSQL: `# \q`. Then return to the *grader* user: `$ exit`
+
  Inside the application.py, database_setup.py and add_movies.py changed from 
-```
-  engine = create_engine('sqlite:///item_catalog.db')
-```
-To
+
 ```
    engine = create_engine('postgresql://movie_catalog :movie_catalog @localhost/movie_catalog')
 ```
 
-#### 12. Install Flask and other dependencies
+#### 11. Install Flask and other dependencies
 
 ```
 $ sudo apt-get install python-pip
@@ -162,7 +158,7 @@ $ sudo pip install httplib2 oauth2client sqlalchemy psycopg2 sqlalchemy_utils
 $ sudo pip install requests
 ```
 
-#### 13. Clone the item-catalog app from Github
+#### 12. Clone the item-catalog app from Github
 
   Clone the **item-catalog** to the catalog directory `/var/www/`:
 
@@ -207,7 +203,7 @@ $ python database_setup.py
 $ python add_movies.py
 ```
 
-#### 14.  Create virtual host configuration:
+#### 13.  Create virtual host configuration:
 
 ```
 $ sudo nano /etc/apache2/sites-available/catalog.conf
@@ -255,7 +251,7 @@ $ sudo rm 000-default
 $ sudo service apache2 reload
 ```
 
-### 17. Fix gp_client_secrets.json not found
+### 14. Fix gp_client_secrets.json not found
 add the folowing code inside application.py
 ```
 CLIENT_ID = json.loads(
