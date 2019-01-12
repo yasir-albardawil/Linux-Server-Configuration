@@ -2,7 +2,7 @@
 
 # Linux Server Configuration
 
-#### Web site link: http://ec2-54-93-109-154.eu-central-1.compute.amazonaws.com/
+#### Website link: http://ec2-54-93-109-154.eu-central-1.compute.amazonaws.com/
 
 * **Public IP Address:** ## 54.93.109.154
 * **Accessible SSH port:** 2200
