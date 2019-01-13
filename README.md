@@ -274,9 +274,9 @@ $ sudo service apache2 restart
 
  * https://hk.saowen.com/a/0a0048ca7141440d0553425e8df46b16cdf4c13f50df4c5888256393d34bb1b9
 * https://mudspringhiker.github.io/deploying-a-flask-web-app-on-lightsail-aws.html
-* https://www.youtube.com/watch?v=kDRRtPO0YPA&t=223s
-* https://www.youtube.com/watch?v=Ta7HAvu-GPs&t=954s
-* https://www.youtube.com/watch?v=iVGtJOC71Fw
 * http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/
 * https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
 * https://pypi.org/
+* https://www.youtube.com/watch?v=kDRRtPO0YPA&t=223s
+* https://www.youtube.com/watch?v=Ta7HAvu-GPs&t=954s
+* https://www.youtube.com/watch?v=iVGtJOC71Fw
