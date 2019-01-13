@@ -261,16 +261,16 @@ CLIENT_ID = json.loads(
 ```
 oauth_flow = flow_from_clientsecrets('/var/www/catalog/gp_client_secrets.json', scope='')
 ```
-#### 18. In order to install packages *kept back* you have to run:
+#### 15. In order to install packages *kept back* you have to run:
 ```
 sudo apt-get update && sudo apt-get dist-upgrade
 ```
 
-#### 19. Restart Apache to launch the app
+#### 16. Restart Apache to launch the app
 ```
 $ sudo service apache2 restart
 ```
-#### 20. List of third party resources used
+#### 17. List of third party resources used
 
  * https://hk.saowen.com/a/0a0048ca7141440d0553425e8df46b16cdf4c13f50df4c5888256393d34bb1b9
 * https://mudspringhiker.github.io/deploying-a-flask-web-app-on-lightsail-aws.html
