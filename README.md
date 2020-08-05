@@ -5,7 +5,7 @@
 
 #### Website link: http://ec2-54-93-109-154.eu-central-1.compute.amazonaws.com/
 
-* **Public IP Address:** ## 54.93.109.154
+* **Public IP Address:** 54.93.109.154
 * **Accessible SSH port:** 2200
 
 ## Steps to Configure Linux server
